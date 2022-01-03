@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('header') %>
+
+<body>
+    
+    <%- include('nav') %>
+
+    <section>
+
+        <% if (message) { %>
+            <div id="alert" class = "alert alert-<%= message.type %>">
+                <strong> <%= message.message %> </strong>
+            </div>
+        <% } %>
+
+            <div class="columns">
+                <div class="column description search-food">
+                    <div class="blurred-image-sea" style="background-image: url(assets/images/meal-prep.jpg);"></div>
+                    <div class="box1">
+                        <h2><%= text %></h2>
+                        <form class="search-form" action="/search-result" method="GET">
+                            <input id="search-box" type="text" name="keyword" placeholder="Search food name">
+                            <input id="search-food-btn" type="submit" value="Search" >
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="container is-medium has-pv-med">
+                <h3 class="centered"> Your search result will show here</h3>
+            </div> 
+    </section>
+
+    <%- include('footer') %>
+
+</body>
+
+</html>
