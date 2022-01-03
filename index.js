@@ -32,7 +32,7 @@ app.use(function(req, res, next) {
 app.set('view engine', 'ejs')
 
 //connect to database
-db.connect((err) => {
+db.getConnection((err) => {
     if (err) {
         console.log(err);
     } else {
