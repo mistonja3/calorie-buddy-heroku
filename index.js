@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
 
-const db = mysql.createConnection({
+const db = mysql.createPool({
     host: 'us-cdbr-east-04.cleardb.com',
     user: 'bba52950916ea5',
     password: 'b793f083',
