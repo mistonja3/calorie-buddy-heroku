@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('header') %>
+<%- include('header') %>
 
 <body>
 
     <%- include('nav') %>
 
     <% if (message) { %>
-        <div id="alert" class = "alert closebtn alert-<%= message.type %>">
-            <strong> <%= message.message %> </strong>
-        </div>
+    <div id="alert" class="alert closebtn alert-<%= message.type %>">
+        <strong> <%= message.message %> </strong>
+    </div>
     <% } %>
 
     <div class="columns">
@@ -21,7 +21,7 @@
             </div>
             <div class="add-food-form">
                 <form class="adding-food" method="POST">
-                    
+
                     <div class="fields">
                         <label for="name">Food Name</label>
                         <input class="add-input" id="food-name" type="text" name="name" value="<%= food.name%>" />
@@ -29,12 +29,14 @@
 
                     <div class="fields">
                         <label for="typical_value">Typical Value Per</label>
-                        <input class="add-input" id="typical-value" type="text" name="typical_value" value="<%= food.typical_value%>"/>
+                        <input class="add-input" id="typical-value" type="text" name="typical_value"
+                            value="<%= food.typical_value%>" />
                     </div>
 
                     <div class="fields">
                         <label for="unit">Unit</label>
-                        <select class="add-input" id="unit-typical-value" type="text" name="unit" value="<%= food.unit%>">
+                        <select class="add-input" id="unit-typical-value" type="text" name="unit"
+                            value="<%= food.unit%>">
                             <option value="g">gram(s)</option>
                             <option value="ml">mililiter(s)</option>
                             <option value="cups">cup(s)</option>
@@ -44,7 +46,8 @@
 
                     <div class="fields">
                         <label for="calories">Calories</label>
-                        <input class="add-input" id="calories" type="text" name="calories" value="<%= food.calories%>"/>
+                        <input class="add-input" id="calories" type="text" name="calories"
+                            value="<%= food.calories%>" />
                     </div>
 
                     <div class="fields">
@@ -71,7 +74,7 @@
                         <label for="sugar">Sugar</label>
                         <input class="add-input" id="sugar" type="text" name="sugar" value="<%= food.sugar%>" />
                     </div>
-                    
+
                     <div class="fields">
                         <input id="add-food-btn" class="sub-input" type="submit" value="Add" />
                     </div>
@@ -79,8 +82,9 @@
             </div>
         </div>
     </div>
-    
+
     <%- include('footer') %>
 
 </body>
+
 </html>
